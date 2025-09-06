@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>eSports Teams</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+
+        header {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav {
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        nav button {
+            background-color: #444;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        nav button:hover {
+            background-color: #666;
+        }
+
+        .content {
+            padding: 20px;
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .team {
+            background-color: #111;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 5px solid #00ffff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Equipos de eSports
+    </header>
+
+    <nav>
+        <button onclick="mostrarVentana('inicio')">Inicio</button>
+        <button onclick="mostrarVentana('equipos')">Equipos</button>
+        <button onclick="mostrarVentana('jugadores')">Jugadores</button>
+        <button onclick="mostrarVentana('contacto')">Contacto</button>
+    </nav>
+
+    <div id="inicio" class="content active">
+        <h2>Bienvenido a la página de eSports</h2>
+        <p>Explora los mejores equipos y jugadores profesionales del mundo.</p>
+    </div>
+
+    <div id="equipos" class="content">
+        <h2>Equipos Destacados</h2>
+        <div class="team">
+            <h3>Team Liquid</h3>
+            <p>Uno de los equipos más grandes del mundo, con presencia en varios juegos.</p>
+        </div>
+        <div class="team">
+            <h3>Fnatic</h3>
+            <p>Equipo europeo con grandes logros en CS:GO y League of Legends.</p>
+        </div>
+        <div class="team">
+            <h3>G2 Esports</h3>
+            <p>Conocido por su carisma y talento, especialmente en Valorant y LoL.</p>
+        </div>
+    </div>
+
+    <div id="jugadores" class="content">
+        <h2>Jugadores Famosos</h2>
+        <div class="team">
+            <h3>s1mple (CS:GO)</h3>
+            <p>Considerado uno de los mejores jugadores de Counter-Strike de todos los tiempos.</p>
+        </div>
+        <div class="team">
+            <h3>Faker (LoL)</h3>
+            <p>Leyenda viva de League of Legends, juega para T1 en Corea.</p>
+        </div>
+        <div class="team">
+            <h3>TenZ (Valorant)</h3>
+            <p>Jugador estrella de Valorant, conocido por su precisión y velocidad.</p>
+        </div>
+    </div>
+
+    <div id="contacto" class="content">
+        <h2>Contacto</h2>
+        <p>¿Tienes un equipo o jugador para recomendar? Escríbenos a: contacto@esports.com</p>
+    </div>
+
+    <script>
+        function mostrarVentana(id) {
+            const secciones = document.querySelectorAll('.content');
+            secciones.forEach(seccion => seccion.classList.remove('active'));
+
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
